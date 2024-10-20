@@ -1,73 +1,85 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
-body{
-    background: #000;
-}
-
-#parallax{
-    position: relative;
-    width: 100%;
-    height: 100vh;
-    overflow: hidden;
-    background: #000;
-}
-
-#parallax .layer{
-    position: relative;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    overflow: hidden;
-}
-
-#parallax .layer.bg{
-    background: url(https://cdn.getcrowder.com/images/59f1b0be-d7c3-4667-b05a-f4dd95160a74-fondo-4-1.jpg);
-    background-position: bottom center;
-    background-size: cover;
+/* Estilo para el contenedor de cada sección parallax */
+.parallax {
+    height: 100vh; /* Ocupa toda la altura de la pantalla */
+    background-attachment: fixed; /* Fijo para efecto parallax */
+    background-position: center;
     background-repeat: no-repeat;
-}
-
-#parallax .layer.overlay{
-    background: url(https://cdn.getcrowder.com/images/02dfa3ca-4ae2-419e-9605-ae31210c093e-sudamericana.png);
-    background-position: bottom center;
     background-size: cover;
-    background-repeat: no-repeat;
 }
 
-#parallax .layer.cup{
-    background: url(https://cdn.getcrowder.com/images/716d8a73-4088-465a-a265-7cbdde6574c2-copa.png);
-    background-position: bottom center;
-    background-size: cover;
-    background-repeat: no-repeat;
+/* Fondo 1 (fondo general) */
+.parallax.fondo1 {
+    background-image: url(https://cdn.getcrowder.com/images/adfc46bb-1f0d-409a-80f5-c89208b1997d-head-1.png);
 }
 
-#parallax .layer.banner{
-    background: url(https://cdn.getcrowder.com/images/f3f58c12-f0d5-4229-af6c-45f22869adb6-fondoblack-removebg-preview.png);
-    background-position: bottom center;
-    background-size: cover;
-    background-repeat: no-repeat;
+/* Fondo 2 (imagen 1) */
+.parallax.fondo2 {
+    background-image: url(https://cdn.getcrowder.com/images/f9241eb2-c34f-48b7-b333-3a710c83669c-nuevaollaaerea.jpg);
 }
 
-section{
-    padding: 0 100px 100px;
+/* Estilo para el contenido entre las secciones parallax */
+.content {
+    height: 50vh;
+    background-color:#020343;
     display: flex;
     justify-content: center;
     align-items: center;
-    text-align: cetner;
-    flex-direction: column;
+    font-size: 2rem;
+    color: #333;
+    text-align: center;
+
 }
 
-section img{
-    max-width: 500px;
+.content1{
+    /* background: url(https://cdn.getcrowder.com/images/f3f58c12-f0d5-4229-af6c-45f22869adb6-fondoblack-removebg-preview.png); */
+    background-color: #020343;
+    width: 100%;
+    height: 65vh;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
-section p{
-    color:#fff;
-    margin-top:20px;
+.content1 p{
+    color: #fff;
+    padding: 10%;
+    margin-left: 5px;
+}
+
+.img1A{
+    width: 25vw;
+    height: 65vh;
+}
+.img1B{
+    width: 50vw;
+    height: 70vh;
+}
+
+.content2{
+    background-color: #020343;
+    width: 100%;
+    height: 65vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative; 
+}
+
+.img2A{
+    width: 30vw;
+    height: 100vh;
+    padding-bottom: 100px;
+    position: absolute; /* Posiciona la imagen absolutamente dentro del contenedor */
+    left: 50px; /* Mueve la imagen a la izquierda */
+    top: 50%; /* Opcional: alinear verticalmente la imagen */
+    transform: translateY(-50%); /* Centra verticalmente la imagen */
+
+}
+.img2B{
+    width: 50vw;
+    height: 70vh;
 }
